@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E'Jay Corpuz - Personal Webpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainindex.css" />
+ 
+ <div id="about-heading" class="about-heading-hidden">
+  <h1>About E’Jay Corpuz</h1>
+</div>
+
+</head>
+<body>
+ <header id="navbar" class="navbar">
+ <a href="#home" class="logo-link">
+  <div class="logo"></div>
+</a>
+
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="Gallery.html">Gallery</a>
+  </nav>
+</header>
+
+
+  <section id="home" class="home">
+    <div class="intro">
+      <h1>Welcome !</h1>
+      <h2>I'M  E’Jay Corpuz</h2>
+      <em>Code by day, dominate the court by night! 💻🏀</em>
+      <p>This IT whiz brings algorithmic precision to his game, sinking shots as smoothly as he debugs code. A true hybrid talent, his tech mind sharpens his court vision, while his athletic drive fuels his coding hustle.
+      <br><br>
+      When he's not crushing programs, he's breaking ankles – proving brains and ball skills make an unstoppable combo. The ultimate geek-athlete who codes like a pro and balls like a champ! #TechBaller #Wagmagpapabola #SyempredaaninsaDiskarte!
+      </p>
+    </div>
+	<div class="home-image">
+    <img src="5.jpg" alt="Basketball image" width="300" style="margin-top: 20px; border-radius: 12px;">
+	</div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-text">
+      <h1 style="font-size: 36px; margin-bottom: 20px; color: #bcb5aa;">PERSONAL PROFILE</h1>
+      <p>Edriane Jay Corpuz is a driven IT student and competitive basketball player who excels in both tech and sports. When he's not coding or studying systems, he's on the court leading his team with sharp strategy and hustle.<br><br>
+      Balancing academics and athletics, he proves that discipline and passion can go hand in hand. Whether debugging programs or driving to the basket, Edriane brings focus, creativity, and hard work to everything he does.
+      <br><br>Code. Ball. Repeat.</p>
+    </div>
+ <img src="Kobe.gif" alt="Basketball image" class="home-img">
+
+  </section>
+  <script>
+  let lastScrollY = window.scrollY;
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      navbar.classList.add('nav-hidden');
+    } else {
+      navbar.classList.remove('nav-hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+</script>
+<script>
+  const aboutSection = document.getElementById('about');
+  const aboutHeading = document.getElementById('about-heading');
+
+  window.addEventListener('scroll', () => {
+    const aboutTop = aboutSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (aboutTop < windowHeight / 2) {
+      aboutHeading.classList.add('show');
+    } else {
+      aboutHeading.classList.remove('show');
+    }
+  });
+</script>
+<script>
+  window.addEventListener("scroll", function () {
+    const aboutSection = document.querySelector("#about");
+    const aboutHeading = document.querySelector("#about-heading");
+    const rect = aboutSection.getBoundingClientRect();
+
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+      aboutHeading.classList.add("show");
+    } else {
+      aboutHeading.classList.remove("show");
+    }
+  });
+</script>
+
+</body>
+</html>

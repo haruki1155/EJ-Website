@@ -1,0 +1,250 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+   background-color: #a8a29e;
+}
+
+input, select, textarea, button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background: #a8a29e;
+  overflow: hidden;
+
+}
+
+.rectangle {
+  width: 100%;
+  height: 153px;
+  background: #d9d9d9;
+  position: relative;
+}
+.league,
+.team,
+.me {
+  position: absolute;
+  top: 58px;
+  font-family: Aleo, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 43px;
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none; /* removes underline */
+}
+
+.league:hover,
+.team:hover,
+.me:hover {
+  text-decoration: underline; /* optional hover effect */
+}
+
+.gallery-1 {
+  position: absolute;
+  top: 53px;
+  left: 50px;
+  color: #000;
+  font-family: Aleo, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 18px;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.league,
+.team,
+.me {
+  position: absolute;
+  top: 58px;
+  font-family: Aleo, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 43px;
+  white-space: nowrap;
+  color: #000;
+}
+
+.league {
+  right: 50px;
+}
+
+.team {
+  right: 200px;
+}
+
+.me {
+  right: 320px;
+}
+
+.weui-back-outlined {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0 43px;
+  padding: 3px 0;
+  border-top: 2px solid #000000;
+  width: fit-content;
+}
+.weui-back-outlined {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vector {
+  width: 14.998px;
+  height: 28.333px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/AAhuQqWovu.png)
+    no-repeat center;
+  background-size: cover;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.me-2 {
+  font-size: 96px;
+  font-weight: 600;
+  font-family: Aleo, var(--default-font-family);
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  margin-top: -50px;
+}
+
+.flex-row-e {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.first-div,
+.second-div,
+.third-div,
+.fourth-div {
+  width: 320px;
+  height: 490px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.first-div {
+  background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/YSHeSsqkjg.png);
+}
+
+.second-div {
+  background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/2oc9Fcv21b.png);
+}
+
+.third-div {
+  background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/TRGMt2x5pA.png);
+}
+
+.fourth-div {
+  background-image: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/rKNUgyob4V.png);
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 1024px) {
+  .gallery-1 {
+    font-size: 32px;
+    letter-spacing: 10px;
+  }
+
+  .league,
+  .team,
+  .me {
+    font-size: 28px;
+  }
+
+  .me-2 {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rectangle {
+    height: auto;
+   
+  }
+
+  .gallery-1,
+  .league,
+  .team,
+  .me {
+    position: static;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .me-2 {
+    font-size: 60px;
+  }
+
+  .flex-row-e {
+    justify-content: center;
+  }
+
+  .first-div,
+  .second-div,
+  .third-div,
+  .fourth-div {
+    width: 90%;
+    height: 300px;
+  }
+}
+.first-div,
+.second-div,
+.third-div,
+.fourth-div,
+.main-content,
+.main-content-new, /* add this if you want hover on your new image */
+.sidebar,
+.header,
+.footer,
+.navigation,
+.main-content-3,
+.sidebar-4 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.first-div:hover,
+.second-div:hover,
+.third-div:hover,
+.fourth-div:hover,
+.main-content:hover,
+.main-content-new:hover,
+.sidebar:hover,
+.header:hover,
+.footer:hover,
+.navigation:hover,
+.main-content-3:hover,
+.sidebar-4:hover {
+  transform: scale(1.05);
+  z-index: 1000;
+}

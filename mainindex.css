@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Belanosima, sans-serif;
+}
+
+header {
+  background-color: #cbd2d0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 153px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 95px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.logo {
+  height: 105px;
+  width: 105px;
+  border-radius: 10px;
+  background: url("https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/T0f5OhWb2H.png") no-repeat center/cover;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: black;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+section {
+  padding: 200px 50px 100px;
+}
+
+.home, .about {
+  min-height: 100vh;
+}
+.logo-link {
+  display: block;
+  height: 105px;
+  width: 105px;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: url("https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-22/T0f5OhWb2H.png") no-repeat center/cover;
+}
+
+
+/* Updated Home Section Styling */
+.home {
+  background-color: #779891;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+.intro {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-img {
+  width: 300px;
+  border-radius: 12px;
+
+}
+.home-image {
+  width: 300px;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-right: 100px; /* 👈 Shift it 20px to the left */
+}
+
+
+/* About Section */
+.about {
+  background-color: #3d3d3d;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 60px;
+  color: white;
+  padding-left: 110px;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: black;
+  padding-left: 110px;
+}
+
+.intro em {
+  font-size: 20px;
+  display: block;
+  padding-left: 110px;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  max-width: 600px;
+  font-size: 18px;
+ padding-left: 110px;
+}
+
+.about-text {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.about img {
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  nav a {
+    margin: 10px;
+  }
+
+  section {
+    padding: 150px 20px 60px;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .intro h1 {
+    font-size: 40px;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+  }
+
+  .intro p,
+  .about-text {
+    font-size: 16px;
+  }
+
+  .home-img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Navigation Scroll Hide */
+.nav-hidden {
+  top: -120px;
+}
+
+
+#about-heading {
+  position: fixed;
+  top: 80px; /* You can adjust this to move it up/down */
+  left: 110px;
+  background: #3d3d3d;
+  color: white;
+  padding: 15px 30px;
+  font-size: 28px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateX(-100%); /* Hides it to the left */
+  transition: transform 0.1s ease-out, opacity 0.2s ease-out;
+}
+/* Responsive font size */
+@media (max-width: 768px) {
+  #about-heading h1 {
+    font-size: 24px;
+  }
+}
+  
+#about-heading.show {
+  transform: translateX(0);  /* Slides it into view */
+  opacity: 1;
+}
+
